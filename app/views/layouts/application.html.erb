@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>Wikinimous</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <div class="navbar navbar-fixed">
+    <!-- Logo -->
+    <a href="/" class="navbar-brand">Wikinimous</a>
+
+    <!-- Right Navigation -->
+    <div class="navbar-right navbar-link">
+
+      <!-- Text link -->
+      <%= link_to "New article", new_article_path %>
+
+    </div>
+  </div>
+
+  <div class="container text-center page-content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
