@@ -49,3 +49,4 @@ end
 
 gem 'faker'
 gem 'redcarpet'
+gem 'ace-rails-ap'
